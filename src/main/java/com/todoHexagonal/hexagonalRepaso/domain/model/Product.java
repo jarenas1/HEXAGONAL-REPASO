@@ -3,6 +3,8 @@ package com.todoHexagonal.hexagonalRepaso.domain.model;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
 
 import java.math.BigDecimal;
 
@@ -17,8 +19,9 @@ public class Product {
     private String name;
 
     private String description;
-
+    @NotNull
+    @Min(value = 0, message = "price must be positive")
     private BigDecimal price;   //Se usa bigDecimal para ser mas exactos con precios
-
+    @NotNull
     private String currency;
 }
