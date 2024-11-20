@@ -1,4 +1,4 @@
-package com.todoHexagonal.hexagonalRepaso.repository;
+package com.todoHexagonal.hexagonalRepaso.domain.repository;
 
 import com.todoHexagonal.hexagonalRepaso.domain.model.Product;
 
