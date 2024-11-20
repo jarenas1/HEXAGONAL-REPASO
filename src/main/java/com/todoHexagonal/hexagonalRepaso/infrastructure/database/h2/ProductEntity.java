@@ -24,4 +24,24 @@ public class ProductEntity {
     private BigDecimal price;   //Se usa bigDecimal para ser mas exactos con precios
     @NotNull
     private String currency;
+
+    public @NotNull String getCurrency() {
+        return currency;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public @NotNull @Min(value = 0, message = "price must be positive") BigDecimal getPrice() {
+        return price;
+    }
 }
